@@ -1,10 +1,18 @@
 @import "tailwindcss";
 body {
   color: white;
+  font-family: "Barlow", sans-serif;
+  background-color: black;
 }
 
 button {
   padding: 1rem;
   background-color: white;
   color: black;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bellefair", serif;
 }
