@@ -1,27 +1,20 @@
 import { Routes, Route } from "react-router-dom";
-import Header from "./assets/components/Header";
-import Footer from "./assets/components/Footer";
-import Navbar from "./assets/components/NavBar";
 
+import Layout from "./layouts/Layout";
 import Home from "./pages/Home";
 import Technology from "./pages/Technology";
 import Crew from "./pages/Crew";
 import Destination from "./pages/Destination";
 
-function App() {
+export default function App() {
   return (
-    <>
-      <Header />
-      <Navbar />
-      <Footer />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/technology" element={<Technology />} />
-        <Route path="/crew" element={<Crew />} />
-        <Route path="/destination" element={<Destination />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="destination" element={<Destination />} />
+        <Route path="crew" element={<Crew />} />
+        <Route path="technology" element={<Technology />} />
+      </Route>
+    </Routes>
   );
 }
-
-export default App;
