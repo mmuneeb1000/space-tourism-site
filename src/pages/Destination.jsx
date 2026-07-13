@@ -1,13 +1,16 @@
 import { useState } from "react";
 import data from "../data.json";
-
+import bgDestination from "/assets/destination/background-destination-desktop.jpg";
 export default function Destination() {
   const [active, setActive] = useState(0);
 
   const destination = data.destinations[active];
 
   return (
-    <section>
+    <section
+      className="min-h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${bgDestination})` }}
+    >
       <img src={destination.images.png} alt={destination.name} />
 
       <div className="flex gap-6">

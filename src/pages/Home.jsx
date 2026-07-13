@@ -1,6 +1,10 @@
+import bgHome from "/assets/home/background-home-desktop.jpg";
 export default function Home() {
   return (
-    <section>
+    <section
+      className="min-h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${bgHome})` }}
+    >
       <h3>So, you want to travel to </h3>
       <h2>Space</h2>
       <p>

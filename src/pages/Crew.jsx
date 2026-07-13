@@ -1,5 +1,6 @@
 import { useState } from "react";
 import data from "../data.json";
+import bgCrew from "/assets/crew/background-crew-desktop.jpg";
 
 export default function Crew() {
   const [active, setActive] = useState(0);
@@ -7,10 +8,13 @@ export default function Crew() {
   const crew = data.crew[active];
 
   return (
-    <section>
+    <section
+      className="min-h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${bgCrew})` }}
+    >
       <img src={crew.images.png} alt={crew.name} />
 
-      <div>
+      <div className="flex gap-6">
         {data.crew.map((member, index) => (
           <button key={member.name} onClick={() => setActive(index)}>
             ●
