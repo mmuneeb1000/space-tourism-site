@@ -6,10 +6,10 @@ export default function Header() {
     <header className="bg-black flex justify-between">
       <img src={Mainlogo} />
       <nav className="flex gap-6">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/destination">Destination</NavLink>
-        <NavLink to="/crew">Crew</NavLink>
-        <NavLink to="/technology">Technology</NavLink>
+        <NavLink to="/">00 Home</NavLink>
+        <NavLink to="/destination">01 Destination</NavLink>
+        <NavLink to="/crew">02 Crew</NavLink>
+        <NavLink to="/technology">03 Technology</NavLink>
       </nav>
     </header>
   );
