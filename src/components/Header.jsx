@@ -3,13 +3,27 @@ import { NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header className="bg-black flex justify-between">
-      <img src={Mainlogo} />
-      <nav className="flex gap-6">
-        <NavLink to="/">00 Home</NavLink>
-        <NavLink to="/destination">01 Destination</NavLink>
-        <NavLink to="/crew">02 Crew</NavLink>
-        <NavLink to="/technology">03 Technology</NavLink>
+    <header className="absolute h-20 top-10 left-0 w-full flex items-center justify-between pl-16">
+      <span className="flex items-center z-20 w-200">
+        <img src={Mainlogo} alt="Logo" className="mx-12 w-12" />
+
+        <div className="h-px hidden lg:flex flex-1 bg-white/25 -mr-8 z-20"></div>
+      </span>
+      <nav className="relative w-200 flex justify-end z-10 bg-white/5 backdrop-blur-2xl px-10 py-6">
+        <ul className="flex gap-12 uppercase">
+          <li>
+            <NavLink to="/">00 Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/destination">01 Destination</NavLink>
+          </li>
+          <li>
+            <NavLink to="/crew">02 Crew</NavLink>
+          </li>
+          <li>
+            <NavLink to="/technology">03 Technology</NavLink>
+          </li>
+        </ul>
       </nav>
     </header>
   );
