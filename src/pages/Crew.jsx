@@ -13,7 +13,7 @@ export default function Crew() {
       style={{ backgroundImage: `url(${bgCrew})` }}
     >
       <h1 className="pt-40 uppercase ml-40 text-xl">02 Meet Your Crew</h1>
-      <div className="flex items-center justify-between mx-30">
+      <div className="flex items-center justify-between mx-40">
         <div className="max-w-[540px] text-white ml-40 ">
           <h3 className="mb-2 font-serif text-xl uppercase text-white/50">
             {crew.role}
@@ -40,7 +40,7 @@ export default function Crew() {
             ))}
           </div>
         </div>
-        <img className="h-120 mx-40" src={crew.images.png} alt={crew.name} />
+        <img className="h-140" src={crew.images.png} alt={crew.name} />
       </div>
     </section>
   );
