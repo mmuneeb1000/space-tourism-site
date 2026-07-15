@@ -18,7 +18,7 @@ export default function Technology() {
         03 Space Launch 101
       </h1>
       <img
-        className="h-100 px-6 my-6 lg:hidden"
+        className="h-100 px-6 my-6 lg:hidden z-20 "
         src={tech.images.portrait}
         alt={tech.name}
       />
@@ -56,7 +56,7 @@ export default function Technology() {
           </div>
         </div>
         <img
-          className="hidden lg:flex lg:h-120"
+          className="hidden lg:flex lg:h-120 z-20 "
           src={tech.images.portrait}
           alt={tech.name}
         />

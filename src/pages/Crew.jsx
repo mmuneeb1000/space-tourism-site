@@ -47,7 +47,11 @@ export default function Crew() {
             ))}
           </div>
         </div>
-        <img className="lg:h-140 p-8" src={crew.images.png} alt={crew.name} />
+        <img
+          className="lg:h-140 p-8 z-20 "
+          src={crew.images.png}
+          alt={crew.name}
+        />
       </div>
     </section>
   );
