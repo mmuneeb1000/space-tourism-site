@@ -21,7 +21,7 @@ export default function Crew() {
         Crew
       </h1>
       <div
-        className="lg:max-w-350 flex flex-col mx-auto items-center justify-center
+        className="lg:max-w-325 flex flex-col mx-auto items-center justify-center
       lg:flex-row lg:items-center lg:justify-between "
       >
         <div className="p-6 text-white text-center lg:text-left lg:ml-40 ">
