@@ -1,9 +1,13 @@
-import bgHome from "/assets/home/background-home-desktop.jpg";
+import bgHomeDesktop from "/assets/home/background-home-desktop.jpg";
+import bgHomeTablet from "/assets/home/background-home-tablet.jpg";
+import bgHomeMobile from "/assets/home/background-home-mobile.jpg";
+import useResponsiveBackground from "../hooks/useResponsiveBackground";
 export default function Home() {
+  const bg = useResponsiveBackground(bgHomeDesktop, bgHomeTablet, bgHomeMobile);
   return (
     <section
       className="fixed inset-0 overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: `url(${bgHome})` }}
+      style={{ backgroundImage: `url(${bg})` }}
     >
       <div
         className="relative z-10 flex flex-col lg:flex-row h-full justify-evenly items-center

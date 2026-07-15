@@ -6,7 +6,7 @@ export default function Layout() {
     <>
       <div
         className="
-        absolute flex justify-center left-7 lg:left-20 inset-0 z-10 pointer-events-none mx-auto
+        absolute flex h-full justify-center left-7 lg:left-20 inset-0 z-10 pointer-events-none mx-auto
         max-w-[1400px]
         bg-[length:25%_100%]
        sm:bg-[length:20%_100%]

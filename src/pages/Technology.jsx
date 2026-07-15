@@ -1,21 +1,30 @@
 import { useState } from "react";
 import data from "../data.json";
-import bgTechnology from "/assets/technology/background-technology-desktop.jpg";
+import bgTechnologyDesktop from "/assets/technology/background-technology-desktop.jpg";
+import bgTechnologyTablet from "/assets/technology/background-technology-tablet.jpg";
+import bgTechnologyMobile from "/assets/technology/background-technology-mobile.jpg";
+import useResponsiveBackground from "../hooks/useResponsiveBackground";
 
 export default function Technology() {
   const [active, setActive] = useState(0);
 
   const tech = data.technology[active];
+  const bg = useResponsiveBackground(
+    bgTechnologyDesktop,
+    bgTechnologyTablet,
+    bgTechnologyMobile,
+  );
   return (
     <section
-      className="h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${bgTechnology})` }}
+      className="h-full lg:h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${bg})` }}
     >
       <h1
         className="lg:pt-40 pt-25 text-center lg:text-left
        uppercase lg:ml-40 text-xl"
       >
-        03 Space Launch 101
+        <span className="text-white/40 font-semibold mr-2">03</span> Space
+        Launch 101
       </h1>
       <img
         className="h-100 px-6 my-6 lg:hidden z-20 "

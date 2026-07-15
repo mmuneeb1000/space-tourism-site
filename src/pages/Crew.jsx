@@ -1,19 +1,24 @@
 import { useState } from "react";
 import data from "../data.json";
-import bgCrew from "/assets/crew/background-crew-desktop.jpg";
+import bgCrewDesktop from "/assets/crew/background-crew-desktop.jpg";
+import bgCrewTablet from "/assets/crew/background-crew-tablet.jpg";
+import bgCrewMobile from "/assets/crew/background-crew-mobile.jpg";
+import useResponsiveBackground from "../hooks/useResponsiveBackground";
 
 export default function Crew() {
   const [active, setActive] = useState(0);
 
   const crew = data.crew[active];
+  const bg = useResponsiveBackground(bgCrewDesktop, bgCrewTablet, bgCrewMobile);
 
   return (
     <section
-      className="h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${bgCrew})` }}
+      className="h-full lg:h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${bg})` }}
     >
       <h1 className="lg:pt-40 pt-25 text-center lg:text-left uppercase lg:ml-40 text-xl">
-        02 Meet Your Crew
+        <span className="text-white/40 font-semibold mr-2">02</span> Meet Your
+        Crew
       </h1>
       <div
         className="lg:max-w-350 flex flex-col mx-auto items-center justify-center

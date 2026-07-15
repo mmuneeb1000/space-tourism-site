@@ -1,18 +1,27 @@
 import { useState } from "react";
 import data from "../data.json";
-import bgDestination from "/assets/destination/background-destination-desktop.jpg";
+import bgDestinationDesktop from "/assets/destination/background-destination-desktop.jpg";
+import bgDestinationTablet from "/assets/destination/background-destination-tablet.jpg";
+import bgDestinationMobile from "/assets/destination/background-destination-mobile.jpg";
+import useResponsiveBackground from "../hooks/useResponsiveBackground";
+
 export default function Destination() {
   const [active, setActive] = useState(0);
 
   const destination = data.destinations[active];
-
+  const bg = useResponsiveBackground(
+    bgDestinationDesktop,
+    bgDestinationTablet,
+    bgDestinationMobile,
+  );
   return (
     <section
-      className="h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${bgDestination})` }}
+      className="h-full lg:h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${bg})` }}
     >
       <h1 className="lg:pt-40 pt-25 text-center lg:text-left uppercase lg:ml-40 text-xl">
-        01 Pick your destination
+        <span className="text-white/40 font-semibold mr-2">01</span> Pick your
+        destination
       </h1>
       <div className="flex flex-col lg:flex-row items-center justify-between px-8 lg:mx-30">
         <img

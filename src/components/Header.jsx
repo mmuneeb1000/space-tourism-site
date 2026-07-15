@@ -21,22 +21,22 @@ export default function Header() {
       </button>
       <nav className="hidden relative w-170 lg:flex justify-end z-10 bg-white/5 backdrop-blur-2xl px-10">
         <ul className="flex gap-12 uppercase ">
-          <li className="py-6 border-b-2 border-transparent hover:border-white">
+          <li className="py-6 border-b-4 border-transparent hover:border-white">
             <NavLink to="/">
               <span className="mr-2 font-semibold">00</span> Home
             </NavLink>
           </li>
-          <li className="py-6 border-b-2 border-transparent hover:border-white">
+          <li className="py-6 border-b-4 border-transparent hover:border-white">
             <NavLink to="/destination">
               <span className="mr-2 font-semibold">01</span> Destination
             </NavLink>
           </li>
-          <li className="py-6 border-b-2 border-transparent hover:border-white">
+          <li className="py-6 border-b-4 border-transparent hover:border-white">
             <NavLink to="/crew">
               <span className="mr-2 font-semibold">02</span> Crew
             </NavLink>
           </li>
-          <li className="py-6 border-b-2 border-transparent hover:border-white">
+          <li className="py-6 border-b-4 border-transparent hover:border-white">
             <NavLink to="/technology">
               <span className="mr-2 font-semibold">03</span> Technology
             </NavLink>
