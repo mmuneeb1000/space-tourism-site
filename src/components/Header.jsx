@@ -25,7 +25,10 @@ export default function Header() {
       <button onClick={() => setOpen(true)} className="md:hidden flex z-20">
         <img className="max-w-20" src={MenuHamburger} />
       </button>
-      <nav className="hidden relative w-170 lg:flex justify-end z-10 bg-white/5 backdrop-blur-2xl px-10">
+      <nav
+        className="hidden relative w-170 md:flex justify-end z-10
+       bg-white/5 backdrop-blur-2xl px-10"
+      >
         <ul className="flex gap-12 uppercase py-6">
           {navItems.map((item) => (
             <li key={item.path}>
@@ -58,7 +61,7 @@ export default function Header() {
           </button>
         </div>
 
-        <nav className="mt-10 flex flex-col gap-8 px-8 text-white uppercase tracking-[2px] border-r-4 py-2">
+        <nav className="mt-10 flex flex-col gap-8 px-8 text-white uppercase tracking-[2px]">
           {navItems.map((item) => (
             <NavLink
               key={item.path}

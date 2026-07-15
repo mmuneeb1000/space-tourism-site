@@ -19,57 +19,77 @@ export default function Technology() {
       className="h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <h1
-        className="lg:pt-40 pt-25 text-center lg:text-left
-       uppercase lg:ml-70 text-xl"
-      >
-        <span className="text-white/40 font-semibold mr-2">03</span> Space
-        Launch 101
-      </h1>
+      <div className="mx-auto flex h-full max-w-7xl flex-col justify-center">
+        <h1 className="mb-8 mt-20 px-6 uppercase tracking-[4px] lg:px-30">
+          <span className="mr-4 font-bold text-white/40">03</span>
+          Space launch 101
+        </h1>
 
-      <div className="lg:ml-40 flex justify-center lg:items-center lg:justify-between">
-        <div className="flex flex-col lg:flex-row lg:gap-12 gap-4">
-          <img
-            className="h-[250px] object-cover mt-6 mb-2 lg:hidden z-20 "
-            src={tech.images.portrait}
-            alt={tech.name}
-          />
-          <div className="flex lg:flex-col justify-center lg:justify-start gap-5 lg:ml-30">
-            {data.technology.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActive(index)}
-                className={`flex h-10 w-10 lg:h-20 lg:w-20 items-center justify-center
-                cursor-pointer rounded-full border font-serif lg:text-[32px] transition ${
+        <div className="flex justify-center lg:items-center lg:justify-between">
+          <div className="flex flex-col gap-4 lg:flex-row lg:gap-12">
+            <figure className="lg:hidden">
+              <img
+                className="z-20 mt-6 mb-2 h-[250px] w-full object-cover"
+                src={tech.images.landscape}
+                alt={tech.name}
+              />
+            </figure>
+
+            <nav
+              aria-label="Technology"
+              className="flex justify-center gap-5 lg:ml-30 lg:flex-col lg:justify-start"
+            >
+              {data.technology.map((item, index) => (
+                <button
+                  key={item.name}
+                  type="button"
+                  onClick={() => setActive(index)}
+                  aria-label={`View ${item.name}`}
+                  aria-current={active === index ? "page" : undefined}
+                  className={`flex h-10 w-10 items-center justify-center rounded-full 
+                    border font-serif transition lg:h-20 lg:w-20 lg:text-[32px]
+                ${
                   active === index
-                    ? "bg-white text-[#0B0D17] border-white"
+                    ? "border-white bg-white text-[#0B0D17]"
                     : "border-white/25 text-white hover:border-white"
-                }`}
-              >
-                <span className="pb-1 lg:pb-2">{index + 1}</span>
-              </button>
-            ))}
+                }
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-white
+                focus-visible:ring-offset-4
+                focus-visible:ring-offset-[#0B0D17]
+              `}
+                >
+                  <span className="pb-1 lg:pb-2">{index + 1}</span>
+                </button>
+              ))}
+            </nav>
+
+            <article className="max-w-[470px] px-6 text-center mx-auto text-white lg:text-left">
+              <header>
+                <p className="mb-2 uppercase tracking-[2.7px] text-[#D0D6F9]">
+                  The terminology...
+                </p>
+
+                <h2 className="mb-4 font-serif text-[32px] uppercase lg:text-[48px]">
+                  {tech.name}
+                </h2>
+              </header>
+
+              <p className="text-[15px] leading-7 text-[#D0D6F9] lg:text-[18px]">
+                {tech.description}
+              </p>
+            </article>
           </div>
 
-          <div className="max-w-[470px] text-white text-center lg:text-left px-6">
-            <h2 className="mb-2 text-[16px] uppercase tracking-[2.7px] text-[#D0D6F9]">
-              The terminology...
-            </h2>
-
-            <h1 className="mb-2 font-serif text-[32px] lg:text-[48px] uppercase">
-              {tech.name}
-            </h1>
-
-            <p className="lg:text-[18px] text-[15px] leading-7 text-[#D0D6F9]">
-              {tech.description}
-            </p>
-          </div>
+          <figure className="hidden lg:block">
+            <img
+              className="z-20 h-130"
+              src={tech.images.portrait}
+              alt={tech.name}
+            />
+          </figure>
         </div>
-        <img
-          className="hidden lg:flex lg:h-130 z-20 "
-          src={tech.images.portrait}
-          alt={tech.name}
-        />
       </div>
     </section>
   );

@@ -16,47 +16,56 @@ export default function Crew() {
       className="h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <h1 className="lg:pt-40 pt-25 text-center lg:text-left uppercase lg:ml-70 text-xl">
-        <span className="text-white/40 font-semibold mr-2">02</span> Meet Your
-        Crew
-      </h1>
-      <div
-        className="lg:max-w-350 flex flex-col mx-auto items-center justify-center
-      lg:flex-row lg:items-center lg:justify-between "
-      >
-        <div className="p-6 text-white text-center lg:text-left lg:ml-40 ">
-          <h3 className="mb-2 font-serif lg:text-2xl uppercase text-white/50">
-            {crew.role}
-          </h3>
+      <div className="mx-auto flex h-full max-w-7xl flex-col justify-center px-6 lg:px-30">
+        <h1 className="mb-2 mt-25 uppercase text-center md:text-left tracking-[4px]">
+          <span className="mr-4 font-bold text-white/40">02</span>
+          Meet your crew
+        </h1>
 
-          <h2 className="mb-2 font-serif text-2xl lg:text-6xl uppercase">
-            {crew.name}
-          </h2>
+        <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
+          <article className="text-center lg:text-left">
+            <header>
+              <p className="mb-2 font-serif text-lg uppercase text-white/50 lg:text-[24px]">
+                {crew.role}
+              </p>
 
-          <p className="max-w-[445px] text-[15px] lg:text-[18px] lg:leading-8 text-[#D0D6F9]">
-            {crew.bio}
-          </p>
+              <h2 className="mb-6 font-serif text-2xl uppercase lg:text-5xl">
+                {crew.name}
+              </h2>
+            </header>
 
-          <div className="lg:mt-24 mt-6 flex lg:justify-start justify-center items-center gap-6">
-            {data.crew.map((member, index) => (
-              <button
-                key={member.name}
-                onClick={() => setActive(index)}
-                aria-label={member.name}
-                className={`h-3 w-3 rounded-full cursor-pointer transition ${
-                  active === index
-                    ? "bg-white"
-                    : "bg-white/20 hover:bg-white/50"
-                }`}
-              />
-            ))}
-          </div>
+            <p className="max-w-[445px] text-[15px] leading-7 text-[#D0D6F9] lg:text-[18px] lg:leading-8">
+              {crew.bio}
+            </p>
+            <nav
+              aria-label="Crew members"
+              className="mt-6 flex items-center justify-center gap-6 lg:mt-24 lg:justify-start"
+            >
+              {data.crew.map((member, index) => (
+                <button
+                  key={member.name}
+                  type="button"
+                  onClick={() => setActive(index)}
+                  aria-label={`View ${member.name}, ${member.role}`}
+                  aria-current={active === index ? "page" : undefined}
+                  className={`h-3 w-3 rounded-full transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-[#0B0D17] ${
+                    active === index
+                      ? "bg-white"
+                      : "bg-white/20 hover:bg-white/50"
+                  }`}
+                />
+              ))}
+            </nav>
+          </article>
+
+          <figure className="inline-block [mask-image:radial-gradient(circle,black_75%,transparent_100%)]">
+            <img
+              className="z-20 h-[42vh] md:h-[45vh] lg:h-140"
+              src={crew.images.png}
+              alt={`${crew.name}, ${crew.role}`}
+            />
+          </figure>
         </div>
-        <img
-          className="lg:h-140 h-90 p-4 lg:mr-20 z-20 "
-          src={crew.images.png}
-          alt={crew.name}
-        />
       </div>
     </section>
   );
