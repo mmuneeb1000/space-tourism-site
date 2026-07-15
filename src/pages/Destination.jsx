@@ -37,7 +37,7 @@ export default function Destination() {
           <article className="max-w-[445px] text-center lg:text-left">
             <nav
               aria-label="Destinations"
-              className="mb-4 flex justify-center gap-4 lg:text-[18px] uppercase lg:justify-start"
+              className="mb-4 flex justify-center gap-4 lg:text-[20px] uppercase lg:justify-start"
             >
               {data.destinations.map((item, index) => (
                 <button
