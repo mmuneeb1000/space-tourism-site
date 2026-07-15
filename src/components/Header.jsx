@@ -20,24 +20,60 @@ export default function Header() {
         <img className="max-w-20" src={MenuHamburger} />
       </button>
       <nav className="hidden relative w-170 lg:flex justify-end z-10 bg-white/5 backdrop-blur-2xl px-10">
-        <ul className="flex gap-12 uppercase ">
-          <li className="py-6 border-b-4 border-transparent hover:border-white">
-            <NavLink to="/">
+        <ul className="flex gap-12 uppercase py-6">
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                `border-b-4 py-6  ${
+                  isActive
+                    ? "border-white"
+                    : "border-transparent hover:border-white/40"
+                }`
+              }
+              to="/"
+            >
               <span className="mr-2 font-semibold">00</span> Home
             </NavLink>
           </li>
-          <li className="py-6 border-b-4 border-transparent hover:border-white">
-            <NavLink to="/destination">
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                `border-b-4 py-6  ${
+                  isActive
+                    ? "border-white"
+                    : "border-transparent hover:border-white/40"
+                }`
+              }
+              to="/destination"
+            >
               <span className="mr-2 font-semibold">01</span> Destination
             </NavLink>
           </li>
-          <li className="py-6 border-b-4 border-transparent hover:border-white">
-            <NavLink to="/crew">
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                `border-b-4 py-6  ${
+                  isActive
+                    ? "border-white"
+                    : "border-transparent hover:border-white/40"
+                }`
+              }
+              to="/crew"
+            >
               <span className="mr-2 font-semibold">02</span> Crew
             </NavLink>
           </li>
-          <li className="py-6 border-b-4 border-transparent hover:border-white">
-            <NavLink to="/technology">
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                `border-b-4 py-6  ${
+                  isActive
+                    ? "border-white"
+                    : "border-transparent hover:border-white/40"
+                }`
+              }
+              to="/technology"
+            >
               <span className="mr-2 font-semibold">03</span> Technology
             </NavLink>
           </li>
