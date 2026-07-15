@@ -13,15 +13,15 @@ export default function Crew() {
 
   return (
     <section
-      className="h-full lg:h-screen bg-cover bg-center"
+      className="h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <h1 className="lg:pt-40 pt-25 text-center lg:text-left uppercase lg:ml-40 text-xl">
+      <h1 className="lg:pt-40 pt-25 text-center lg:text-left uppercase lg:ml-70 text-xl">
         <span className="text-white/40 font-semibold mr-2">02</span> Meet Your
         Crew
       </h1>
       <div
-        className="lg:max-w-325 flex flex-col mx-auto items-center justify-center
+        className="lg:max-w-350 flex flex-col mx-auto items-center justify-center
       lg:flex-row lg:items-center lg:justify-between "
       >
         <div className="p-6 text-white text-center lg:text-left lg:ml-40 ">
@@ -29,11 +29,11 @@ export default function Crew() {
             {crew.role}
           </h3>
 
-          <h2 className="mb-4 font-serif text-2xl lg:text-6xl uppercase">
+          <h2 className="mb-2 font-serif text-2xl lg:text-6xl uppercase">
             {crew.name}
           </h2>
 
-          <p className="max-w-[445px] text-[18px] lg:leading-8 text-[#D0D6F9]">
+          <p className="max-w-[445px] text-[15px] lg:text-[18px] lg:leading-8 text-[#D0D6F9]">
             {crew.bio}
           </p>
 
@@ -53,7 +53,7 @@ export default function Crew() {
           </div>
         </div>
         <img
-          className="lg:h-140 p-6 z-20 "
+          className="lg:h-140 h-90 p-4 lg:mr-20 z-20 "
           src={crew.images.png}
           alt={crew.name}
         />

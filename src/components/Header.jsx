@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header
       className="absolute w-full py-4 px-6 flex items-center justify-between 
-             lg:h-20 lg:top-10 left-0 lg:py-8 lg:pl-16"
+             lg:h-20 lg:top-10 left-0 lg:pr-0 lg:py-8 lg:pl-16"
     >
       <span className="flex items-center z-20 w-200">
         <img src={Mainlogo} alt="Logo" className="lg:mx-12 w-12" />

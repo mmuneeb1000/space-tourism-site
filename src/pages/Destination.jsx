@@ -16,21 +16,24 @@ export default function Destination() {
   );
   return (
     <section
-      className="h-full lg:h-screen bg-cover bg-center"
+      className="h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <h1 className="lg:pt-40 pt-25 text-center lg:text-left uppercase lg:ml-40 text-xl">
+      <h1 className="lg:pt-40 pt-25 text-center lg:text-left uppercase lg:ml-70 text-xl">
         <span className="text-white/40 font-semibold mr-2">01</span> Pick your
         destination
       </h1>
-      <div className="flex flex-col lg:flex-row items-center justify-between px-8 lg:mx-30">
+      <div className="max-w-320 flex flex-col lg:flex-row items-center justify-between px-8 lg:mx-30">
         <img
           src={destination.images.png}
           alt={destination.name}
-          className="w-[300px] h-[300px] my-6 lg:h-[445px] lg:w-[445px] z-20 lg:mx-40"
+          className="w-[180px] h-[180px] p-2 lg:p-6 lg:my-8 lg:h-[445px] lg:w-[445px] z-20 lg:mx-40"
         />
-        <div className="max-w-[445px] text-center lg:text-left">
-          <div className="my-6  lg:mb-10 flex justify-center lg:justify-start gap-8 uppercase tracking-[2.7px] text-[#D0D6F9]">
+        <div className="max-w-[400px] text-center lg:text-left">
+          <div
+            className="my-6 lg:mb-10 flex justify-center lg:justify-start gap-8 
+          uppercase tracking-[2.7px] text-[#D0D6F9]"
+          >
             {data.destinations.map((item, index) => (
               <button
                 key={item.name}
@@ -46,21 +49,21 @@ export default function Destination() {
             ))}
           </div>
 
-          <h1 className="mb-4 font-serif text-[48px] lg:text-[100px] uppercase leading-none">
+          <h1 className="mb-2 font-serif text-[48px] lg:text-[90px] uppercase leading-none">
             {destination.name}
           </h1>
 
-          <p className="border-b border-white/20 pb-12 text-[18px] leading-8 text-[#D0D6F9]">
+          <p className="border-b border-white/20 pb-4 lg:pb-12 text:[15px] lg:text-[18px] leading-8 text-[#D0D6F9]">
             {destination.description}
           </p>
 
-          <div className="mt-8 flex justify-center gap-10 lg:gap-20 uppercase">
+          <div className="mt-5 flex justify-center gap-10 lg:gap-20 uppercase">
             <div>
-              <p className="mb-3 text-sm tracking-[2px] text-[#D0D6F9]">
+              <p className="mb-2 text-sm tracking-[2px] text-[#D0D6F9]">
                 Avg. Distance
               </p>
 
-              <p className="font-serif lg:text-[28px]">
+              <p className="font-serif lg:text-[22px]">
                 {destination.distance}
               </p>
             </div>
@@ -70,7 +73,7 @@ export default function Destination() {
                 Est. Travel Time
               </p>
 
-              <p className="font-serif lg:text-[28px]">{destination.travel}</p>
+              <p className="font-serif lg:text-[22px]">{destination.travel}</p>
             </div>
           </div>
         </div>

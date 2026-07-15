@@ -11,9 +11,9 @@ export default function Home() {
     >
       <div
         className="relative z-10 flex flex-col lg:flex-row h-full justify-evenly items-center
-      lg:items-end  lg:justify-between px-6 lg:px-40 lg:pb-32"
+      lg:items-end  lg:justify-between px-6 lg:px-70 lg:pb-32"
       >
-        <div className="max-w-[450px] text-white text-center lg:text-left">
+        <div className="max-w-[420px] text-white text-center lg:text-left">
           <h2 className="mb-6 lg:text-[28px] uppercase tracking-[4.75px] text-[#D0D6F9]">
             So, you want to travel to
           </h2>
