@@ -6,6 +6,12 @@ import MenuClose from "/assets/shared/icon-close.svg";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const navItems = [
+    { number: "00", label: "Home", path: "/" },
+    { number: "01", label: "Destination", path: "/destination" },
+    { number: "02", label: "Crew", path: "/crew" },
+    { number: "03", label: "Technology", path: "/technology" },
+  ];
   return (
     <header
       className="absolute w-full py-4 px-6 flex items-center justify-between 
@@ -21,62 +27,23 @@ export default function Header() {
       </button>
       <nav className="hidden relative w-170 lg:flex justify-end z-10 bg-white/5 backdrop-blur-2xl px-10">
         <ul className="flex gap-12 uppercase py-6">
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                `border-b-4 py-6  ${
-                  isActive
-                    ? "border-white"
-                    : "border-transparent hover:border-white/40"
-                }`
-              }
-              to="/"
-            >
-              <span className="mr-2 font-semibold">00</span> Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                `border-b-4 py-6  ${
-                  isActive
-                    ? "border-white"
-                    : "border-transparent hover:border-white/40"
-                }`
-              }
-              to="/destination"
-            >
-              <span className="mr-2 font-semibold">01</span> Destination
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                `border-b-4 py-6  ${
-                  isActive
-                    ? "border-white"
-                    : "border-transparent hover:border-white/40"
-                }`
-              }
-              to="/crew"
-            >
-              <span className="mr-2 font-semibold">02</span> Crew
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                `border-b-4 py-6  ${
-                  isActive
-                    ? "border-white"
-                    : "border-transparent hover:border-white/40"
-                }`
-              }
-              to="/technology"
-            >
-              <span className="mr-2 font-semibold">03</span> Technology
-            </NavLink>
-          </li>
+          {navItems.map((item) => (
+            <li key={item.path}>
+              <NavLink
+                to={item.path}
+                className={({ isActive }) =>
+                  `border-b-4 py-6 ${
+                    isActive
+                      ? "border-white"
+                      : "border-transparent hover:border-white/40"
+                  }`
+                }
+              >
+                <span className="mr-2 font-semibold">{item.number}</span>
+                {item.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
       <aside
@@ -92,61 +59,23 @@ export default function Header() {
         </div>
 
         <nav className="mt-10 flex flex-col gap-8 px-8 text-white uppercase tracking-[2px] border-r-4 py-2">
-          <NavLink
-            className={({ isActive }) =>
-              `border-r-4 ${
-                isActive
-                  ? "border-white"
-                  : "border-transparent hover:border-white/40"
-              }`
-            }
-            to="/"
-            onClick={() => setOpen(false)}
-          >
-            <span className="mr-3 font-bold">00</span> Home
-          </NavLink>
-
-          <NavLink
-            className={({ isActive }) =>
-              `border-r-4${
-                isActive
-                  ? "border-white"
-                  : "border-transparent hover:border-white/40"
-              }`
-            }
-            to="/destination"
-            onClick={() => setOpen(false)}
-          >
-            <span className="mr-3 font-bold">01</span> Destination
-          </NavLink>
-
-          <NavLink
-            className={({ isActive }) =>
-              `border-r-4 ${
-                isActive
-                  ? "border-white"
-                  : "border-transparent hover:border-white/40"
-              }`
-            }
-            to="/crew"
-            onClick={() => setOpen(false)}
-          >
-            <span className="mr-3 font-bold">02</span> Crew
-          </NavLink>
-
-          <NavLink
-            className={({ isActive }) =>
-              `border-r-4 ${
-                isActive
-                  ? "border-white"
-                  : "border-transparent hover:border-white/40"
-              }`
-            }
-            to="/technology"
-            onClick={() => setOpen(false)}
-          >
-            <span className="mr-3 font-bold">03</span> Technology
-          </NavLink>
+          {navItems.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                `border-r-4 py-2 ${
+                  isActive
+                    ? "border-white"
+                    : "border-transparent hover:border-white/40"
+                }`
+              }
+            >
+              <span className="mr-3 font-bold">{item.number}</span>
+              {item.label}
+            </NavLink>
+          ))}
         </nav>
       </aside>
     </header>

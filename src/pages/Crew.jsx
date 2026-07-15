@@ -24,7 +24,7 @@ export default function Crew() {
         className="lg:max-w-350 flex flex-col mx-auto items-center justify-center
       lg:flex-row lg:items-center lg:justify-between "
       >
-        <div className=" text-white text-center lg:text-left lg:ml-40 ">
+        <div className="p-6 text-white text-center lg:text-left lg:ml-40 ">
           <h3 className="mb-2 font-serif lg:text-2xl uppercase text-white/50">
             {crew.role}
           </h3>

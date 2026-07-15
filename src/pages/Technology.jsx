@@ -26,13 +26,14 @@ export default function Technology() {
         <span className="text-white/40 font-semibold mr-2">03</span> Space
         Launch 101
       </h1>
-      <img
-        className="h-100 px-6 my-6 lg:hidden z-20 "
-        src={tech.images.portrait}
-        alt={tech.name}
-      />
-      <div className="lg:ml-40 flex items-center justify-between">
+
+      <div className="lg:ml-40 flex justify-center lg:items-center lg:justify-between">
         <div className="flex flex-col lg:flex-row gap-12">
+          <img
+            className="h-100 px-6 my-6 lg:hidden z-20 "
+            src={tech.images.portrait}
+            alt={tech.name}
+          />
           <div className="flex lg:flex-col justify-center lg:justify-start gap-3">
             {data.technology.map((_, index) => (
               <button
