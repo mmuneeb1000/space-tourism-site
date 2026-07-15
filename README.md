@@ -19,7 +19,7 @@ A modern, fully responsive space tourism website built with **React**, **Vite**,
 
 ## 🌐 Live Demo
 
-**Website:** https://your-live-site.com
+**Website:** https://magical-biscotti-4f58cd.netlify.app/
 
 ## 📸 Preview
 
