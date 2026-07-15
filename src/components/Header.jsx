@@ -55,20 +55,60 @@ export default function Header() {
           </button>
         </div>
 
-        <nav className="mt-10 flex flex-col gap-8 px-8 text-white uppercase tracking-[2px]">
-          <NavLink to="/" onClick={() => setOpen(false)}>
+        <nav className="mt-10 flex flex-col gap-8 px-8 text-white uppercase tracking-[2px] border-r-4 py-2">
+          <NavLink
+            className={({ isActive }) =>
+              `border-r-4 ${
+                isActive
+                  ? "border-white"
+                  : "border-transparent hover:border-white/40"
+              }`
+            }
+            to="/"
+            onClick={() => setOpen(false)}
+          >
             <span className="mr-3 font-bold">00</span> Home
           </NavLink>
 
-          <NavLink to="/destination" onClick={() => setOpen(false)}>
+          <NavLink
+            className={({ isActive }) =>
+              `border-r-4${
+                isActive
+                  ? "border-white"
+                  : "border-transparent hover:border-white/40"
+              }`
+            }
+            to="/destination"
+            onClick={() => setOpen(false)}
+          >
             <span className="mr-3 font-bold">01</span> Destination
           </NavLink>
 
-          <NavLink to="/crew" onClick={() => setOpen(false)}>
+          <NavLink
+            className={({ isActive }) =>
+              `border-r-4 ${
+                isActive
+                  ? "border-white"
+                  : "border-transparent hover:border-white/40"
+              }`
+            }
+            to="/crew"
+            onClick={() => setOpen(false)}
+          >
             <span className="mr-3 font-bold">02</span> Crew
           </NavLink>
 
-          <NavLink to="/technology" onClick={() => setOpen(false)}>
+          <NavLink
+            className={({ isActive }) =>
+              `border-r-4 ${
+                isActive
+                  ? "border-white"
+                  : "border-transparent hover:border-white/40"
+              }`
+            }
+            to="/technology"
+            onClick={() => setOpen(false)}
+          >
             <span className="mr-3 font-bold">03</span> Technology
           </NavLink>
         </nav>

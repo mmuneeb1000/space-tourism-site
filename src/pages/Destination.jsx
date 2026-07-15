@@ -11,17 +11,17 @@ export default function Destination() {
       className="h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${bgDestination})` }}
     >
-      <h1 className="pt-40 uppercase ml-40 text-xl">
+      <h1 className="lg:pt-40 uppercase lg:ml-40 text-xl">
         01 Pick your destination
       </h1>
-      <div className="flex items-center justify-between mx-30">
+      <div className="flex flex-col lg:flex-row items-center justify-between p-8 lg:mx-30">
         <img
           src={destination.images.png}
           alt={destination.name}
-          className="h-[445px] w-[445px] mx-40"
+          className="w-[300px] h-[300px] lg:h-[445px] lg:w-[445px] lg:mx-40"
         />
-        <div className="max-w-[445px] ">
-          <div className="mb-10 flex gap-8 uppercase tracking-[2.7px] text-[#D0D6F9]">
+        <div className="max-w-[445px] text-center lg:text-left">
+          <div className="my-6  lg:mb-10 flex justify-center lg:justify-start gap-8 uppercase tracking-[2.7px] text-[#D0D6F9]">
             {data.destinations.map((item, index) => (
               <button
                 key={item.name}
@@ -37,7 +37,7 @@ export default function Destination() {
             ))}
           </div>
 
-          <h1 className="mb-4 font-serif text-[100px] uppercase leading-none">
+          <h1 className="mb-4 font-serif text-[48px] lg:text-[100px] uppercase leading-none">
             {destination.name}
           </h1>
 
@@ -45,13 +45,15 @@ export default function Destination() {
             {destination.description}
           </p>
 
-          <div className="mt-8 flex gap-20 uppercase">
+          <div className="mt-8 flex justify-center gap-10 lg:gap-20 uppercase">
             <div>
               <p className="mb-3 text-sm tracking-[2px] text-[#D0D6F9]">
                 Avg. Distance
               </p>
 
-              <p className="font-serif text-[28px]">{destination.distance}</p>
+              <p className="font-serif lg:text-[28px]">
+                {destination.distance}
+              </p>
             </div>
 
             <div>
@@ -59,7 +61,7 @@ export default function Destination() {
                 Est. Travel Time
               </p>
 
-              <p className="font-serif text-[28px]">{destination.travel}</p>
+              <p className="font-serif lg:text-[28px]">{destination.travel}</p>
             </div>
           </div>
         </div>
