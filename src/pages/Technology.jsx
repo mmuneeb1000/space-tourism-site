@@ -11,11 +11,14 @@ export default function Technology() {
       className="h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${bgTechnology})` }}
     >
-      <h1 className="lg:pt-40 uppercase lg:ml-40 text-xl">
+      <h1
+        className="lg:pt-40 pt-25 text-center lg:text-left
+       uppercase lg:ml-40 text-xl"
+      >
         03 Space Launch 101
       </h1>
       <img
-        className="h-100 px-6 lg:hidden"
+        className="h-100 px-6 my-6 lg:hidden"
         src={tech.images.portrait}
         alt={tech.name}
       />
@@ -38,7 +41,7 @@ export default function Technology() {
             ))}
           </div>
 
-          <div className="max-w-[470px] text-white px-6">
+          <div className="max-w-[470px] text-white text-center lg:text-left px-6">
             <h2 className="mb-4 text-[16px] uppercase tracking-[2.7px] text-[#D0D6F9]">
               The terminology...
             </h2>

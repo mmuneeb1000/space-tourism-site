@@ -11,14 +11,14 @@ export default function Destination() {
       className="h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${bgDestination})` }}
     >
-      <h1 className="lg:pt-40 uppercase lg:ml-40 text-xl">
+      <h1 className="lg:pt-40 pt-25 text-center lg:text-left uppercase lg:ml-40 text-xl">
         01 Pick your destination
       </h1>
-      <div className="flex flex-col lg:flex-row items-center justify-between p-8 lg:mx-30">
+      <div className="flex flex-col lg:flex-row items-center justify-between px-8 lg:mx-30">
         <img
           src={destination.images.png}
           alt={destination.name}
-          className="w-[300px] h-[300px] lg:h-[445px] lg:w-[445px] lg:mx-40"
+          className="w-[300px] h-[300px] my-6 lg:h-[445px] lg:w-[445px] lg:mx-40"
         />
         <div className="max-w-[445px] text-center lg:text-left">
           <div className="my-6  lg:mb-10 flex justify-center lg:justify-start gap-8 uppercase tracking-[2.7px] text-[#D0D6F9]">
