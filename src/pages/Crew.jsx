@@ -16,7 +16,7 @@ export default function Crew() {
         02 Meet Your Crew
       </h1>
       <div
-        className="flex flex-col p-6 items-center justify-center
+        className="lg:max-w-350 flex flex-col mx-auto items-center justify-center
       lg:flex-row lg:items-center lg:justify-between "
       >
         <div className=" text-white text-center lg:text-left lg:ml-40 ">
@@ -48,7 +48,7 @@ export default function Crew() {
           </div>
         </div>
         <img
-          className="lg:h-140 p-8 z-20 "
+          className="lg:h-140 p-6 z-20 "
           src={crew.images.png}
           alt={crew.name}
         />
