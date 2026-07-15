@@ -20,7 +20,10 @@ export default function Technology() {
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="mx-auto flex h-full max-w-7xl flex-col justify-center">
-        <h1 className="mb-8 mt-20 px-6 uppercase tracking-[4px] lg:px-30">
+        <h1
+          className="mb-4 mt-20 px-6 uppercase 
+        tracking-[4px] lg:px-30 text-[20px] text-center md:text-left"
+        >
           <span className="mr-4 font-bold text-white/40">03</span>
           Space launch 101
         </h1>

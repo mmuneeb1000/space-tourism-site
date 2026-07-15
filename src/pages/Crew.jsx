@@ -17,7 +17,10 @@ export default function Crew() {
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="mx-auto flex h-full max-w-7xl flex-col justify-center px-6 lg:px-30">
-        <h1 className="mb-2 mt-25 uppercase text-center md:text-left tracking-[4px]">
+        <h1
+          className="mb-2 mt-25 uppercase text-center md:text-left 
+        tracking-[4px] text-[20px]"
+        >
           <span className="mr-4 font-bold text-white/40">02</span>
           Meet your crew
         </h1>
