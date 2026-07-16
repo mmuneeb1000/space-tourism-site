@@ -159,6 +159,6 @@ This project helped strengthen my understanding of:
 
 GitHub: https://github.com/mmuneeb1000
 
-Portfolio: https://cute-madeleine-e3573d.netlify.app/
+Portfolio: https://portfolio-developer-muneeb.netlify.app/
 
 LinkedIn: https://www.linkedin.com/in/m-muneeb-a9984633b/
