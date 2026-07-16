@@ -32,7 +32,7 @@ export default function Technology() {
           <div className="flex flex-col gap-4 lg:flex-row lg:gap-12">
             <figure className="lg:hidden">
               <img
-                className="z-20 mt-6 mb-2 h-[250px] w-full object-cover"
+                className="z-20 mt-2 mb-2 h-[250px] w-full object-cover"
                 src={tech.images.landscape}
                 alt={tech.name}
               />
@@ -74,7 +74,7 @@ export default function Technology() {
                   The terminology...
                 </p>
 
-                <h2 className="mb-4 font-serif text-[32px] uppercase lg:text-[48px]">
+                <h2 className="mb-2 font-serif text-[32px] uppercase lg:text-[48px]">
                   {tech.name}
                 </h2>
               </header>

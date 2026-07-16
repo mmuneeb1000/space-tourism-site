@@ -67,7 +67,7 @@ export default function Destination() {
               {destination.description}
             </p>
 
-            <dl className="mt-4 flex justify-center gap-10 uppercase lg:justify-start lg:gap-20">
+            <dl className="mt-2 flex justify-center gap-10 uppercase lg:justify-start lg:gap-20">
               <div>
                 <dt className="mb-2 text-sm tracking-[2px] text-[#D0D6F9]">
                   Avg. Distance
